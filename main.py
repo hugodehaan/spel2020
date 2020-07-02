@@ -26,11 +26,26 @@ def spel() :
   print("Raad de letters en als je het woord weet typ het dan in.")
   print()
   print("het woord heeft " + str(lengtewoord) + " letters")
+  print(hetwoord)
   
  
-
+ #als het woord geraden is
   while game == True:
     userGuess = input("geef letter/woord> ")
+    if userGuess == hetwoord:
+      print ("gefeliciteerd", naam, "je hebt het woord geraden")
+      print()
+      print("wil je nog een keer spelen? ja of nee?")
+      print("Wat goed van je!!!. je had alleen deze letters nodig om het woord te raden")
+
+    if userGuess == ja:
+       spel()
+
+    if userGuess == nee:
+       quit()
+
+  
+
 
 
 spel()
