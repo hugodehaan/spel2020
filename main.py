@@ -2,7 +2,7 @@ import random
 def spel() :
 
   turns = 10
-  
+  #de galgjes die getekend worden met desbetreffende aantal levens
   def drawgalgjes():
     if turns == 9:
         print("Jammer, nog 8 pogingen")
@@ -92,6 +92,7 @@ def spel() :
      / \ |
          |
     _____|""")
+    #als je verloren hebt
         print("Schande!, Je hebt het woord", hetwoord, "niet kunnen raden")
         print("Je kan het nog een keer proberen, type ja of nee")
   
@@ -131,19 +132,20 @@ def spel() :
       print()
       print("wil je nog een keer spelen? Type dan ja of nee?")
       print("Goed gedaan!!! je had alleen deze letters nodig om het woord te raden")
-
+    #speler kan kiezen om opnieuw te spelen
     if userGuess == ja:
        spel()
 
     if userGuess == nee:
        quit()
+    #letter verschijnt als ie geraden is
     else:
       if userGuess in hetwoord:
         for idx, letter in enumerate(hetwoord):
           
           if(letter == userGuess):
             puntjes[idx] = userGuess
-
+      #als er een foute gok is      
       else:
         turns -= 1
         drawgalgjes()
