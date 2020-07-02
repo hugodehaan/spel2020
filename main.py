@@ -87,14 +87,14 @@ def spel() :
     if turns == 1:
         print("""     ____
       | \|
-       o |
+      o  |
      /|\ |
      / \ |
          |
     _____|""")
-        print("Schande!, Je hebt het woord", hetwoord, "niet kunnen raden", naam, "probeer het nog een keer!")
-        print()
-        spel();
+        print("Schande!, Je hebt het woord", hetwoord, "niet kunnen raden")
+        print("Je kan het nog een keer proberen, type ja of nee")
+  
     
 
   # de woorden die gebruikt gaan worden
@@ -126,12 +126,12 @@ def spel() :
  
  #als het woord geraden is
   while game == True:
-    userGuess = input("geef letter/woord> ")
+    userGuess = input("raad een letter of het woord: ")
     if userGuess == hetwoord:
       print ("gefeliciteerd", naam, "je hebt het woord geraden")
       print()
-      print("wil je nog een keer spelen? ja of nee?")
-      print("Wat goed van je!!!. je had alleen deze letters nodig om het woord te raden")
+      print("wil je nog een keer spelen? Type dan ja of nee?")
+      print("Goed gedaan!!! je had alleen deze letters nodig om het woord te raden")
 
     if userGuess == ja:
        spel()
@@ -144,11 +144,9 @@ def spel() :
           
           if(letter == userGuess):
             puntjes[idx] = userGuess
+
+      else:
+        turns -= 1
+        drawgalgjes()
     print(''.join(puntjes))
-      
-
-  
-
-
-
 spel()
