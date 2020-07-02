@@ -121,7 +121,6 @@ def spel() :
   print("Raad de letters en als je het woord weet typ het dan in.")
   print()
   print("het woord heeft " + str(lengtewoord) + " letters")
-  print(hetwoord)
   
  
  #als het woord geraden is
