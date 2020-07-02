@@ -43,6 +43,14 @@ def spel() :
 
     if userGuess == nee:
        quit()
+    else:
+      if userGuess in hetwoord:
+        for idx, letter in enumerate(hetwoord):
+          
+          if(letter == userGuess):
+            puntjes[idx] = userGuess
+    print(''.join(puntjes))
+      
 
   
 
