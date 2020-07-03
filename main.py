@@ -150,4 +150,8 @@ def spel() :
         turns -= 1
         drawgalgjes()
     print(''.join(puntjes))
+
+  if userGuess not in validLetters:
+   turns -= 1
+   
 spel()
